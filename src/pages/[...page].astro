@@ -1,0 +1,80 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CatCard from '../components/CatCard.astro';
+
+export interface Props {
+  cats: CollectionEntry<'cats'>[];
+  pageNums: number[];
+}
+
+export async function getStaticPaths() {
+  const NUM_CATS_PER_PAGE = 18;
+
+  const [firstCat] = await getCollection('cats');
+  const allCats = Array(100).fill(firstCat);
+
+  const maxPageNum = Math.ceil(allCats.length / NUM_CATS_PER_PAGE);
+  const pageNums = [...Array(maxPageNum).keys()].map((key) => key + 1);
+
+  return pageNums.map((num) => ({
+    params: { page: num === 1 ? undefined : num.toString() },
+    props: {
+      cats: allCats.slice(
+        NUM_CATS_PER_PAGE * (num - 1),
+        NUM_CATS_PER_PAGE * num
+      ),
+      pageNums
+    }
+  }));
+}
+
+const { page } = Astro.params;
+const { cats, pageNums } = Astro.props;
+const currentPageNum = Number(page || '1');
+---
+
+<BaseLayout title={page ? `Page ${page}` : undefined}>
+  <div class="row">
+    {
+      cats.map((cat) => (
+        <div class="col-12 col-6-md col-4-lg">
+          <CatCard cat={cat} />
+        </div>
+      ))
+    }
+  </div>
+  <nav class="nav" aria-label="Page navigation">
+    <div class="nav-center">
+      {
+        pageNums.map((num) => (
+          <a
+            href={`/${num === 1 ? '' : num.toString()}`}
+            class:list={[{ active: num === currentPageNum }]}
+          >
+            {num}
+          </a>
+        ))
+      }
+    </div>
+  </nav>
+</BaseLayout>
+
+<style>
+  .nav {
+    margin-top: 1rem;
+  }
+
+  .nav a {
+    font-size: 2rem;
+  }
+
+  .nav a.active {
+    font-weight: bold;
+  }
+
+  .nav a:hover {
+    text-decoration: underline;
+  }
+</style>
