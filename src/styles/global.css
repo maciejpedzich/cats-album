@@ -1,0 +1,8 @@
+:root {
+  --grid-gutter: 3rem;
+}
+
+body {
+  margin: 0 auto;
+  max-width: min(1200px, 85%);
+}
