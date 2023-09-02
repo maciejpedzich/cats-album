@@ -1,0 +1,12 @@
+{
+  "name": "Placeholder",
+  "description": "This is a placeholder cat with a photo taken from placekitten.com",
+  "image": {
+    "src": "/images/maciejpedzich-placeholder.jpg",
+    "alt": "Sample alt text"
+  },
+  "owner": {
+    "name": "Maciej Pędzich",
+    "link": "https://maciejpedzi.ch"
+  }
+}
