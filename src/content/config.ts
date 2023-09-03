@@ -3,7 +3,7 @@ import { z, defineCollection } from 'astro:content';
 const cats = defineCollection({
   type: 'data',
   schema: z.object({
-    name: z.string().max(20),
+    name: z.string().max(25),
     dateAdded: z
       .string()
       .or(z.date())
