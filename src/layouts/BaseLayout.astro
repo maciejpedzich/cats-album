@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 
 const title = `${titleProp ? `${titleProp} - ` : ''}Cats Of Tech`;
-const imageUrl = image ? new URL(image, Astro.site) : null;
+const imageUrl = image ? new URL(image, Astro.url) : null;
 ---
 
 <html lang="en">
