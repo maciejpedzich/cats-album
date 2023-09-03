@@ -11,9 +11,9 @@ export interface Props {
 
 export async function getStaticPaths() {
   const NUM_CATS_PER_PAGE = 18;
-
-  const [firstCat] = await getCollection('cats');
-  const allCats = Array(100).fill(firstCat);
+  const allCats = (await getCollection('cats')).sort(
+    (a, b) => b.data.dateAdded.valueOf() - a.data.dateAdded.valueOf()
+  );
 
   const maxPageNum = Math.ceil(allCats.length / NUM_CATS_PER_PAGE);
   const pageNums = [...Array(maxPageNum).keys()].map((key) => key + 1);
