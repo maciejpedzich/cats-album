@@ -1,0 +1,59 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+type Props = CollectionEntry<'cats'>;
+
+export async function getStaticPaths() {
+  const cats = await getCollection('cats');
+
+  return cats.map((cat) => ({
+    params: { catId: cat.id },
+    props: cat
+  }));
+}
+
+const cat = Astro.props;
+const title = `${cat.data.owner.name}'s ${cat.data.name}`;
+---
+
+<BaseLayout
+  title={title}
+  description={cat.data.description}
+  image={cat.data.image.src}
+>
+  <h1 class="text-center">
+    {cat.data.name}
+  </h1>
+  <h2 class="text-center">
+    Owner - <a href={cat.data.owner.link}>{cat.data.owner.name}</a>
+  </h2>
+  <div class="row">
+    <div class="col-12 col-6-md">
+      <img src={cat.data.image.src} alt={cat.data.image.alt} />
+    </div>
+    <div class="col-12 col-6-md">
+      <p>
+        {cat.data.description}
+      </p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.75rem;
+  }
+</style>
