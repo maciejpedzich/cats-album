@@ -4,6 +4,10 @@ const cats = defineCollection({
   type: 'data',
   schema: z.object({
     name: z.string(),
+    dateAdded: z
+      .string()
+      .or(z.date())
+      .transform((val) => new Date(val)),
     description: z.string().max(250),
     image: z.object({
       src: z.string(),
