@@ -1,9 +1,14 @@
+---
+import ThemeSwitch from './ThemeSwitch.astro';
+---
+
 <header>
   <nav class="nav" aria-label="Main menu">
     <div class="nav-left">
-      <a id="logo" class="brand" href="/">Cats Of Tech</a>
+      <a id="logo" class="brand text-primary" href="/">Cats Of Tech</a>
     </div>
     <div class="nav-right">
+      <ThemeSwitch />
       <a class="button outline" href="/submit">Submit a cat</a>
     </div>
   </nav>
@@ -16,5 +21,9 @@
     border-bottom-width: 3px;
     border-bottom-style: solid;
     border-bottom-color: var(--color-primary);
+  }
+
+  a {
+    color: var(--text-grey);
   }
 </style>
