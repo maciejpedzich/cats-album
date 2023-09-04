@@ -30,6 +30,23 @@ const themeSwitchDarkIcon = document.getElementById('theme-switch-dark-icon');
 const themeSwitchLightIcon = document.getElementById(
   'theme-switch-light-icon'
 );
+const applyTheme = (theme) => {
+  localStorage.setItem('theme', theme);
+  themeSwitch.setAttribute(
+    'title',
+    `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`
+  );
+
+  if (theme === 'dark') {
+    document.body.classList.add('dark');
+    themeSwitchLightIcon.classList.remove('hidden');
+    themeSwitchDarkIcon.classList.add('hidden');
+  } else {
+    document.body.classList.remove('dark');
+    themeSwitchLightIcon.classList.add('hidden');
+    themeSwitchDarkIcon.classList.remove('hidden');
+  }
+};
 
 if (
   !localStorage.getItem('theme') &&
@@ -39,30 +56,11 @@ if (
   localStorage.setItem('theme', 'dark');
 }
 
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark');
-  themeSwitchLightIcon.classList.remove('hidden');
-  themeSwitchDarkIcon.classList.add('hidden');
-  themeSwitch.setAttribute('title', 'Switch to light theme');
-}
+applyTheme(localStorage.getItem('theme') || 'light');
 
-themeSwitch.addEventListener('click', () => {
-  const currentTheme = localStorage.getItem('theme');
-
-  if (currentTheme === 'dark') {
-    localStorage.setItem('theme', 'light');
-    document.body.classList.remove('dark');
-    themeSwitchLightIcon.classList.add('hidden');
-    themeSwitchDarkIcon.classList.remove('hidden');
-    themeSwitch.setAttribute('title', 'Switch to dark theme');
-  } else {
-    localStorage.setItem('theme', 'dark');
-    document.body.classList.add('dark');
-    themeSwitchLightIcon.classList.remove('hidden');
-    themeSwitchDarkIcon.classList.add('hidden');
-    themeSwitch.setAttribute('title', 'Switch to light theme');
-  }
-});
+themeSwitch.addEventListener('click', () =>
+  applyTheme(localStorage.getItem('theme') === 'dark' ? 'light' : 'dark')
+);
 </script>
 
 <style>
