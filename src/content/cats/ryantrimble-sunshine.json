@@ -1,0 +1,13 @@
+{
+  "name": "Sunshine",
+  "dateAdded": "2023-09-04T18:20:00.066Z",
+  "description": "Really soft fur!",
+  "image": {
+    "src": "/images/ryantrimble-sunshine.jpg",
+    "alt": "Orange-and-white long hair cat lying on a mattress"
+  },
+  "owner": {
+    "name": "Ryan Trimble",
+    "link": "https://ryantrimble.com"
+  }
+}

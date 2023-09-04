@@ -1,0 +1,13 @@
+{
+  "name": "Aldi",
+  "dateAdded": "2023-09-04T18:19:00.066Z",
+  "description": "Found under a dumpster behind an Aldi's grocery store",
+  "image": {
+    "src": "/images/ryantrimble-aldi.jpg",
+    "alt": "Tuxedo cat standing on a blanket in a bedroom"
+  },
+  "owner": {
+    "name": "Ryan Trimble",
+    "link": "https://ryantrimble.com"
+  }
+}

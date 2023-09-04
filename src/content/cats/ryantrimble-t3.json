@@ -1,0 +1,13 @@
+{
+  "name": "T3",
+  "dateAdded": "2023-09-04T18:22:00.066Z",
+  "description": "T3 stands for twenty-two-toes as she is a polydactyl cat",
+  "image": {
+    "src": "/images/ryantrimble-t3.jpg",
+    "alt": "Domestic short hair cat lying on a brown sofa"
+  },
+  "owner": {
+    "name": "Ryan Trimble",
+    "link": "https://ryantrimble.com"
+  }
+}
