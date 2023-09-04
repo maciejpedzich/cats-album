@@ -10,31 +10,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <p>
     If you work in the tech industry and own a cat that you'd like to share,
     then you've come to the right place! Fill out the form below and <a
+      class="text-primary"
       href="https://maciejpedzi.ch">Mac</a
     > should add your feline friend.
   </p>
-  <div id="guidelines" class="bg-primary text-white">
+  <div id="guidelines" class="bg-primary">
     <h3>Guidelines</h3>
     <ul>
-      <li>Only cats, please. This is not dogsof.dev or peopleof.tech</li>
+      <li>Only cats, please. This is not dogsof.dev or peopleof.tech.</li>
       <li>
         I'm fine with any resolution, orientation, and aspect ratio as along as
-        the photo's size doesn't exceed 1 MB
+        the photo's size doesn't exceed 1 MB.
       </li>
       <li>
         Refrain from adding artsy filters or stickers/overlays. Let your cat be
-        the star
+        the star.
       </li>
-      <li>If you own multiple cats, please submit them separately</li>
+      <li>If you own multiple cats, please submit them separately.</li>
       <li>
         If you wish to have your cat's entry updated (e.g. if it passed away), <a
-          class="text-white"
           href="mailto:contact@maciejpedzi.ch">email Mac</a
-        > or <a
-          class="text-white"
-          href="https://github.com/maciejpedzich/catsof.tech/issues"
+        > or <a href="https://github.com/maciejpedzich/catsof.tech/issues"
           >open an issue on GitHub</a
-        >
+        >.
       </li>
     </ul>
   </div>
@@ -96,6 +94,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   a {
     text-decoration: underline;
+    color: var(--bg-color);
   }
 
   form {
@@ -105,13 +104,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     gap: 1.25rem;
   }
 
+  input,
+  textarea {
+    border-color: var(--color-grey);
+    background-color: transparent;
+    color: var(--font-color);
+  }
+
   button[type='submit'] {
     margin-top: 0.5rem;
+    color: var(--bg-color);
   }
 
   #guidelines {
     padding: 0.05rem 1rem 0.5rem 2rem;
     padding-top: 0.05rem;
     margin-bottom: 1.5rem;
+    color: var(--bg-color);
   }
 </style>

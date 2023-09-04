@@ -3,11 +3,30 @@
   --grid-max-width: 100rem;
 }
 
-body {
-  margin: 0 auto;
-  max-width: min(var(--grid-max-width), 75%);
+body.dark {
+  --bg-color: #000;
+  --color-primary: #26b670;
+  --bg-secondary-color: #131316;
+  --font-color: #f5f5f5;
+  --color-grey: #ccc;
+  --color-darkGrey: #777;
 }
 
-a:focus {
+body {
+  margin: 0 auto;
+  max-width: min(var(--grid-max-width), 80%);
+}
+
+a:focus,
+button:focus {
   outline: var(--color-primary) solid 3px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .col-6-md {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc(50% - var(--grid-gutter));
+    flex: 0 0 calc(50% - var(--grid-gutter));
+    max-width: calc(50% - var(--grid-gutter));
+  }
 }
