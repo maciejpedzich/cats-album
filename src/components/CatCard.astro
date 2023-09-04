@@ -42,8 +42,12 @@ const { cat } = Astro.props;
     margin: 0.5rem 0;
     padding: 0;
     flex-direction: column;
-    transition-property: transform;
     transition-duration: 300ms;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--color-grey);
   }
 
   .card h3 {
@@ -65,9 +69,5 @@ const { cat } = Astro.props;
     display: block;
     width: 100%;
     object-fit: cover;
-  }
-
-  .card:hover {
-    transform: scale(1.05);
   }
 </style>
