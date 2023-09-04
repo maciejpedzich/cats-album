@@ -1,0 +1,13 @@
+{
+  "name": "Yuki",
+  "dateAdded": "2023-09-04T19:41:00.066Z",
+  "description": "4-year-old, grey tabby, rescue kitten from an unsafe home of cats/litters. Indoor/Outdoor cat that hates being carried around but loves riding on shoulders.",
+  "image": {
+    "src": "/images/brentmorton-yuki.jpg",
+    "alt": "Grey tabby cat lying on a stone pavement"
+  },
+  "owner": {
+    "name": "Brent Morton",
+    "link": "https://b.1mind.dev"
+  }
+}
