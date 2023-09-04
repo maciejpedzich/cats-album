@@ -1,0 +1,13 @@
+{
+  "name": "Samwise",
+  "dateAdded": "2023-09-04T19:36:00.066Z",
+  "description": "Tiny gremlin. Could carry the one ring, no problem. No ego.",
+  "image": {
+    "src": "/images/evadecker-samwise.jpg",
+    "alt": "Orange-and-white cat lying on a carpet"
+  },
+  "owner": {
+    "name": "Eva Decker",
+    "link": "https://evadecker.com"
+  }
+}
