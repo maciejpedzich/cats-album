@@ -1,0 +1,13 @@
+{
+  "name": "Levi",
+  "dateAdded": "2023-09-04T19:52:00.066Z",
+  "description": "Always meowing, likes to wear shirts.",
+  "image": {
+    "src": "/images/brycerussell-levi.png",
+    "alt": "Orange cat wearing a black pullover"
+  },
+  "owner": {
+    "name": "Bryce Russell",
+    "link": "https://brycerussell.com"
+  }
+}
