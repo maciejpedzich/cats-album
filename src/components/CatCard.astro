@@ -10,7 +10,7 @@ const { cat } = Astro.props;
 
 <a class="card-link-wrapper" href={`/cats/${cat.id}`}>
   <div class="card is-center">
-    <div class="img-wrapper">
+    <div class:list={['img-wrapper', { 'passed-away': cat.data.passedAway }]}>
       <img
         src={cat.data.image.src}
         alt={cat.data.image.alt}
@@ -19,6 +19,7 @@ const { cat } = Astro.props;
         width="350"
         height="250"
       />
+      {cat.data.passedAway && <span class="rip">Rest In Peace</span>}
     </div>
     <h3>{cat.data.name}</h3>
     <p>{cat.data.owner.name}</p>
@@ -60,6 +61,8 @@ const { cat } = Astro.props;
   }
 
   .img-wrapper {
+    position: relative;
+    overflow: hidden;
     width: 100%;
     padding: 2rem;
     padding-bottom: 0.6rem;
@@ -69,5 +72,21 @@ const { cat } = Astro.props;
     display: block;
     width: 100%;
     object-fit: cover;
+  }
+
+  .passed-away > img {
+    filter: grayscale(100%);
+  }
+
+  .card span.rip {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 4rem);
+    margin: 0 2rem;
+    padding: 0.2rem;
+    background-color: #000;
+    text-align: center;
   }
 </style>
