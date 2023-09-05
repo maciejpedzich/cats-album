@@ -1,0 +1,13 @@
+{
+  "name": "Simon",
+  "dateAdded": "2023-09-05T20:09:00.066Z",
+  "description": "",
+  "passedAway": true,
+  "image": {
+    "src": "/images/justinb-simon.jpg",
+    "alt": "Close-up shot of a black-and-white cat sitting on a blanket"
+  },
+  "owner": {
+    "name": "Justin B"
+  }
+}
