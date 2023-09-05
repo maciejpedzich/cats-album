@@ -35,8 +35,13 @@ const title = `${cat.data.owner.name}'s ${cat.data.name}`;
     </div>
     <div class="col-12 col-6-md">
       <p>
-        {cat.data.description}
+        {
+          cat.data.description.length === 0
+            ? 'No description provided.'
+            : cat.data.description
+        }
       </p>
+      {cat.data.passedAway && <p>🕯️ Rest In Peace 🕯️</p>}
     </div>
   </div>
 </BaseLayout>
