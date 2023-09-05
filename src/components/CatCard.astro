@@ -10,8 +10,9 @@ const { cat } = Astro.props;
 
 <a class="card-link-wrapper" href={`/cats/${cat.id}`}>
   <div class="card is-center">
-    <div class:list={['img-wrapper', { 'passed-away': cat.data.passedAway }]}>
+    <div class="img-wrapper">
       <img
+        class:list={[{ 'passed-away': cat.data.passedAway }]}
         src={cat.data.image.src}
         alt={cat.data.image.alt}
         loading="lazy"
@@ -72,10 +73,6 @@ const { cat } = Astro.props;
     display: block;
     width: 100%;
     object-fit: cover;
-  }
-
-  .passed-away > img {
-    filter: grayscale(100%);
   }
 
   .card span.rip {

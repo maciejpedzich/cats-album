@@ -22,6 +22,10 @@ button:focus {
   outline: var(--color-primary) solid 3px;
 }
 
+img.passed-away {
+  filter: grayscale(100%);
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .col-6-md {
     -webkit-box-flex: 0;
