@@ -1,0 +1,13 @@
+{
+  "name": "Bones",
+  "dateAdded": "2023-09-05T19:26:00.066Z",
+  "description": "",
+  "passedAway": true,
+  "image": {
+    "src": "/images/justinb-bones.jpg",
+    "alt": "Dark gray cat lying upside down on a blanket"
+  },
+  "owner": {
+    "name": "Justin B"
+  }
+}
