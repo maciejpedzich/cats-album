@@ -44,31 +44,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   >
     <div>
       <label for="name">Cat's name</label>
-      <input type="text" name="name" required maxlength="25" />
+      <input type="text" id="name" name="name" required maxlength="25" />
       <small>Maximum length: 25 characters</small>
     </div>
     <div>
       <label for="photo">Cat's photo</label>
-      <input type="file" name="photo" required accept="image/*" />
+      <input type="file" id="photo" name="photo" required accept="image/*" />
     </div>
     <div>
       <label for="description">Cat's description (optional)</label>
-      <textarea name="description" maxlength="300"></textarea>
+      <textarea id="description" name="description" maxlength="300"></textarea>
       <small>
         Some ideas: nicknames, age, breed(s), where you adopted this cat
       </small>
     </div>
     <div>
       <label for="passedAway">Check this box if your cat has passed away</label>
-      <input type="checkbox" name="passedAway" />
+      <input type="checkbox" id="passedAway" name="passedAway" />
     </div>
     <div>
-      <label for="name">Owner's name</label>
-      <input type="text" name="ownerName" required />
+      <label for="ownerName">Owner's name</label>
+      <input type="text" id="ownerName" name="ownerName" required />
     </div>
     <div>
-      <label for="name">Owner's link (optional)</label>
-      <input type="url" name="ownerLink" />
+      <label for="ownerLink">Owner's link (optional)</label>
+      <input type="url" id="ownerLink" name="ownerLink" />
       <small>Link to your website or a social media account</small>
     </div>
     <input type="hidden" name="_imascriptkiddie" />
