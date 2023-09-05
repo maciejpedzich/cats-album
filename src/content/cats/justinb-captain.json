@@ -1,0 +1,12 @@
+{
+  "name": "Captain",
+  "dateAdded": "2023-09-05T19:51:00.066Z",
+  "description": "",
+  "image": {
+    "src": "/images/justinb-captain.jpg",
+    "alt": "Long-haired tabby cat sitting on Justin's lap"
+  },
+  "owner": {
+    "name": "Justin B"
+  }
+}
