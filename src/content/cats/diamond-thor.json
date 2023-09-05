@@ -1,0 +1,13 @@
+{
+  "name": "Thor",
+  "dateAdded": "2023-09-05T17:13:00.066Z",
+  "description": "",
+  "image": {
+    "src": "/images/diamond-thor.jpg",
+    "alt": "Black-and-white cat lying upside down on a carpet"
+  },
+  "owner": {
+    "name": "Diamond",
+    "link": "https://twitter.com/dmdboi"
+  }
+}
