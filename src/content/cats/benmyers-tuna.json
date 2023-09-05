@@ -1,0 +1,13 @@
+{
+  "name": "Tuna",
+  "dateAdded": "2023-09-05T20:15:00.066Z",
+  "description": "A domestic shorthair we adopted in March 2020, the weekend everything shut down. Noted fan of blankets.",
+  "image": {
+    "src": "/images/benmyers-tuna.jpg",
+    "alt": "Portrait of a domestic shorthair cat"
+  },
+  "owner": {
+    "name": "Ben Myers",
+    "link": "https://benmyers.dev"
+  }
+}
