@@ -1,0 +1,13 @@
+{
+  "name": "Lucky",
+  "dateAdded": "2023-09-05T19:21:00.066Z",
+  "description": "",
+  "passedAway": true,
+  "image": {
+    "src": "/images/justinb-lucky.jpg",
+    "alt": "Tabby cat with a paw raised in front of its own face"
+  },
+  "owner": {
+    "name": "Justin B"
+  }
+}
