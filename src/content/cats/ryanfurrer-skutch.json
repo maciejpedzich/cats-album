@@ -1,0 +1,14 @@
+{
+  "name": "Skutch",
+  "dateAdded": "2023-09-05T19:15:00.066Z",
+  "description": "Skutch was the runt of the pack, born by a stray mother. He was all of 6 lbs. fully grown and was taken from us too soon.",
+  "passedAway": true,
+  "image": {
+    "src": "/images/ryanfurrer-skutch.jpg",
+    "alt": "Tabby cat sleeping by the window"
+  },
+  "owner": {
+    "name": "Ryan Furrer",
+    "link": "https://ryanfurrer.com"
+  }
+}

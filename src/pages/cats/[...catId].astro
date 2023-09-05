@@ -31,7 +31,11 @@ const title = `${cat.data.owner.name}'s ${cat.data.name}`;
   </h2>
   <div class="row">
     <div class="col-12 col-6-md">
-      <img src={cat.data.image.src} alt={cat.data.image.alt} />
+      <img
+        class:list={[{ 'passed-away': cat.data.passedAway }]}
+        src={cat.data.image.src}
+        alt={cat.data.image.alt}
+      />
     </div>
     <div class="col-12 col-6-md">
       <p>
