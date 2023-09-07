@@ -18,7 +18,6 @@ const {
 } = Astro.props;
 
 const title = `${titleProp ? `${titleProp} - ` : ''}Cats Of Tech`;
-const imageUrl = image ? new URL(image, Astro.url) : null;
 ---
 
 <html lang="en">
@@ -35,10 +34,13 @@ const imageUrl = image ? new URL(image, Astro.url) : null;
     <meta property="og:description" content={description} />
     <meta property="twitter:description" content={description} />
     {
-      imageUrl && (
+      image && (
         <>
-          <meta property="og:image" content={imageUrl} />
-          <meta property="twitter:description" content={imageUrl} />
+          <meta property="og:image" content={new URL(image, Astro.url)} />
+          <meta
+            property="twitter:description"
+            content={new URL(image, Astro.url)}
+          />
         </>
       )
     }
