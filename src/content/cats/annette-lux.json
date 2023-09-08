@@ -1,0 +1,14 @@
+{
+  "name": "Lux",
+  "dateAdded": "2023-09-08T00:44:00.066Z",
+  "description": "A senior (18) pretty girl who has tons of sass!",
+  "passedAway": true,
+  "image": {
+    "src": "/images/annette-lux.jpg",
+    "alt": "Dark gray cat with white spots lying on a white bed"
+  },
+  "owner": {
+    "name": "Annette",
+    "link": "https://ohnetter.github.io/Portfolio"
+  }
+}
