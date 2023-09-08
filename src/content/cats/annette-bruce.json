@@ -1,0 +1,13 @@
+{
+  "name": "Bruce",
+  "dateAdded": "2023-09-08T00:41:00.066Z",
+  "description": "Smooshie face little boy, naked after Bruce Campbell.",
+  "image": {
+    "src": "/images/annette-bruce.jpg",
+    "alt": "Black Asian shorthair cat standing next to two flowerpots on a wooden surface"
+  },
+  "owner": {
+    "name": "Annette",
+    "link": "https://ohnetter.github.io/Portfolio"
+  }
+}
