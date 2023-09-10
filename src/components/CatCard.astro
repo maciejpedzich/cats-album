@@ -10,9 +10,9 @@ const { cat } = Astro.props;
 
 <a class="card-link-wrapper" href={`/cats/${cat.id}`}>
   <div class="card is-center">
-    <div class="img-wrapper">
+    <div class="image-wrapper">
       <img
-        class:list={[{ 'passed-away': cat.data.passedAway }]}
+        class:list={[{ 'rip-image': cat.data.passedAway }]}
         src={cat.data.image.src}
         alt={cat.data.image.alt}
         loading="lazy"
@@ -20,7 +20,7 @@ const { cat } = Astro.props;
         width="350"
         height="250"
       />
-      {cat.data.passedAway && <span class="rip">Rest In Peace</span>}
+      {cat.data.passedAway && <div class="rip-text">Rest In Peace</div>}
     </div>
     <h3>{cat.data.name}</h3>
     <p>{cat.data.owner.name}</p>
@@ -28,16 +28,16 @@ const { cat } = Astro.props;
 </a>
 
 <style>
+  a:focus {
+    outline-width: 5px;
+  }
+
   .card-link-wrapper {
     color: var(--font-color);
   }
 
   .card-link-wrapper:hover {
     opacity: 1;
-  }
-
-  a:focus {
-    outline-width: 5px;
   }
 
   .card {
@@ -52,6 +52,14 @@ const { cat } = Astro.props;
     box-shadow: 0 0 10px var(--color-grey);
   }
 
+  .image-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 2rem;
+    padding-bottom: 0.6rem;
+  }
+
   .card h3 {
     margin-top: 0;
     margin-bottom: 0;
@@ -61,22 +69,13 @@ const { cat } = Astro.props;
     margin-bottom: 1.25rem;
   }
 
-  .img-wrapper {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding: 2rem;
-    padding-bottom: 0.6rem;
-  }
-
   .card img {
     display: block;
     width: 100%;
     object-fit: cover;
   }
 
-  .card span.rip {
-    display: block;
+  .rip-text {
     position: absolute;
     bottom: 0;
     left: 0;

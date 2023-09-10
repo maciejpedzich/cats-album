@@ -22,7 +22,7 @@ button:focus {
   outline: var(--color-primary) solid 3px;
 }
 
-img.passed-away {
+img.rip-image {
   filter: grayscale(100%);
 }
 

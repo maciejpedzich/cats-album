@@ -10,22 +10,24 @@ export interface Props {
 }
 
 export async function getStaticPaths() {
-  const NUM_CATS_PER_PAGE = 18;
   const allCats = (await getCollection('cats')).sort(
     (a, b) => b.data.dateAdded.valueOf() - a.data.dateAdded.valueOf()
   );
 
+  const NUM_CATS_PER_PAGE = 18;
   const maxPageNum = Math.ceil(allCats.length / NUM_CATS_PER_PAGE);
-  const pageNums = [...Array(maxPageNum).keys()].map((key) => key + 1);
 
-  return pageNums.map((num) => ({
-    params: { page: num === 1 ? undefined : num.toString() },
+  // Create an array of integers in range from 1 to maxPageNum inclusive:
+  const allPageNums = [...Array(maxPageNum + 1).keys()].slice(1);
+
+  return allPageNums.map((pageNum) => ({
+    params: { page: pageNum === 1 ? undefined : pageNum.toString() },
     props: {
       cats: allCats.slice(
-        NUM_CATS_PER_PAGE * (num - 1),
-        NUM_CATS_PER_PAGE * num
+        NUM_CATS_PER_PAGE * (pageNum - 1),
+        NUM_CATS_PER_PAGE * pageNum
       ),
-      pageNums
+      pageNums: allPageNums
     }
   }));
 }
