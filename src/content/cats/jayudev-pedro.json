@@ -1,0 +1,13 @@
+{
+  "name": "Pedro",
+  "dateAdded": "2023-09-15T07:50:00.066Z",
+  "description": "",
+  "image": {
+    "src": "/images/jayudev-pedro.jpg",
+    "alt": "Dark gray cat lying upside down on a blanket"
+  },
+  "owner": {
+    "name": "Jakub",
+    "link": "https://twitter.com/jayu_dev"
+  }
+}
