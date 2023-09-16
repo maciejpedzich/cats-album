@@ -3,18 +3,20 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-type Props = CollectionEntry<'cats'>;
+export interface Props {
+  cat: CollectionEntry<'cats'>;
+}
 
 export async function getStaticPaths() {
   const cats = await getCollection('cats');
 
   return cats.map((cat) => ({
     params: { catId: cat.id },
-    props: cat
+    props: { cat }
   }));
 }
 
-const cat = Astro.props;
+const { cat } = Astro.props;
 const title = `${cat.data.owner.name}'s ${cat.data.name}`;
 ---
 

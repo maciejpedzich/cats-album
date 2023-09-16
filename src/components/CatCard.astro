@@ -28,16 +28,16 @@ const { cat } = Astro.props;
 </a>
 
 <style>
-  a:focus {
-    outline-width: 5px;
-  }
-
   .card-link-wrapper {
     color: var(--font-color);
   }
 
   .card-link-wrapper:hover {
     opacity: 1;
+  }
+
+  .card-link-wrapper:focus {
+    outline-width: 5px;
   }
 
   .card {
@@ -54,25 +54,8 @@ const { cat } = Astro.props;
 
   .image-wrapper {
     position: relative;
-    overflow: hidden;
     width: 100%;
-    padding: 2rem;
-    padding-bottom: 0.6rem;
-  }
-
-  .card h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .card p {
-    margin-bottom: 1.25rem;
-  }
-
-  .card img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
+    padding: 2rem 2rem 0.6rem 2rem;
   }
 
   .rip-text {
@@ -85,5 +68,20 @@ const { cat } = Astro.props;
     background-color: #000;
     color: #fff;
     text-align: center;
+  }
+
+  .card img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .card p {
+    margin-bottom: 1.25rem;
   }
 </style>

@@ -14,20 +14,20 @@ export async function getStaticPaths() {
     (a, b) => b.data.dateAdded.valueOf() - a.data.dateAdded.valueOf()
   );
 
-  const NUM_CATS_PER_PAGE = 18;
-  const maxPageNum = Math.ceil(allCats.length / NUM_CATS_PER_PAGE);
+  const CATS_PER_PAGE = 18;
+  const maxPageNum = Math.ceil(allCats.length / CATS_PER_PAGE);
 
   // Create an array of integers in range from 1 to maxPageNum inclusive:
-  const allPageNums = [...Array(maxPageNum + 1).keys()].slice(1);
+  const pageNums = [...Array(maxPageNum + 1).keys()].slice(1);
 
-  return allPageNums.map((pageNum) => ({
+  return pageNums.map((pageNum) => ({
     params: { page: pageNum === 1 ? undefined : pageNum.toString() },
     props: {
       cats: allCats.slice(
-        NUM_CATS_PER_PAGE * (pageNum - 1),
-        NUM_CATS_PER_PAGE * pageNum
+        CATS_PER_PAGE * (pageNum - 1),
+        CATS_PER_PAGE * pageNum
       ),
-      pageNums: allPageNums
+      pageNums
     }
   }));
 }
@@ -52,7 +52,7 @@ const currentPageNum = Number(page || '1');
       {
         pageNums.map((num) => (
           <a
-            href={`/${num === 1 ? '' : num.toString()}`}
+            href={`/${num === 1 ? '' : num}`}
             class:list={[{ active: num === currentPageNum }]}
           >
             {num}
