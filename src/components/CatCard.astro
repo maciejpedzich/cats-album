@@ -16,7 +16,7 @@ const { cat } = Astro.props;
         src={cat.data.image.src}
         alt={cat.data.image.alt}
         loading="lazy"
-        decoding="sync"
+        decoding="async"
         width="350"
         height="250"
       />
