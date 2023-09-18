@@ -1,0 +1,13 @@
+{
+  "name": "Kitten",
+  "dateAdded": "2023-09-18T00:39:00.066Z",
+  "description": "16 year old Norwegian Forest Cat x. He's huge.",
+  "image": {
+    "src": "/images/gingerkiwi-kitten.jpg",
+    "alt": "Fluffy white cat curled up and lying belly side up"
+  },
+  "owner": {
+    "name": "Elizabeth (Liz) McCready",
+    "link": "https://gingerkiwi.blog"
+  }
+}
