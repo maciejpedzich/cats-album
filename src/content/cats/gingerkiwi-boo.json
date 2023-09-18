@@ -1,0 +1,13 @@
+{
+  "name": "Boo",
+  "dateAdded": "2023-09-18T00:41:00.066Z",
+  "description": "Full of love and fun and mischief.",
+  "image": {
+    "src": "/images/gingerkiwi-boo.jpg",
+    "alt": "Dark grey and brown kitten lying on its side"
+  },
+  "owner": {
+    "name": "Elizabeth (Liz) McCready",
+    "link": "https://gingerkiwi.blog"
+  }
+}
