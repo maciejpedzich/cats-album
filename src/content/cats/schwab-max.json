@@ -1,0 +1,13 @@
+{
+  "name": "Max",
+  "dateAdded": "2023-10-03T06:13:00.066Z",
+  "description": "Derpy orange cat.",
+  "image": {
+    "src": "/images/schwab-max.jpg",
+    "alt": "Close-up shot of an orange tabby cat staring at the camera"
+  },
+  "owner": {
+    "name": "Schwab",
+    "link": "https://schwabbthedeck.dev"
+  }
+}
