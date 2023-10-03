@@ -1,0 +1,13 @@
+{
+  "name": "Willow",
+  "dateAdded": "2023-10-03T06:09:00.066Z",
+  "description": "She's a little stupid but very adorable.",
+  "image": {
+    "src": "/images/cjdesiderio-willow.jpg",
+    "alt": "Tabby cat facing the camera and sitting on a light-gray carpet"
+  },
+  "owner": {
+    "name": "Charles",
+    "link": "https://twitter.com/CJDesiderio"
+  }
+}
