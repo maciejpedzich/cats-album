@@ -1,0 +1,13 @@
+{
+  "name": "Minney",
+  "dateAdded": "2023-10-03T06:12:00.066Z",
+  "description": "Majestic sun beam absorber.",
+  "image": {
+    "src": "/images/schwab-minney.jpg",
+    "alt": "Gray cat slightly opened eyes and face lit up by sunlight"
+  },
+  "owner": {
+    "name": "Schwab",
+    "link": "https://schwabbthedeck.dev"
+  }
+}
