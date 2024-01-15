@@ -1,0 +1,13 @@
+{
+  "name": "Xander",
+  "dateAdded": "2024-01-15T17:04:00.066Z",
+  "description": "Chaos Cat, always on the lookout for ways to be disruptive or destructive. Loved in spite of this.",
+  "image": {
+    "src": "/images/privacydingus-xander.jpg",
+    "alt": "Black cat with a white \"collar\" lying on its side on a bed"
+  },
+  "owner": {
+    "name": "PrivacyDingus",
+    "link": "https://technosophy.space"
+  }
+}
