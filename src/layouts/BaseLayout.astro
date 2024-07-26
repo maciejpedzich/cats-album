@@ -44,6 +44,15 @@ const title = `${titleProp ? `${titleProp} - ` : ''}Cats Of Tech`;
         </>
       )
     }
+    {
+      import.meta.env.PROD && (
+        <script
+          defer
+          src="https://analytics.maciejpedzi.ch/script.js"
+          data-website-id="eeb4c389-53f4-47bc-8525-08b4ba277fe2"
+        />
+      )
+    }
   </head>
   <body>
     <Header />
